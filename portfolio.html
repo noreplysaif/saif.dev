@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashkar Ibne Saif | Software Developer & AI Automation Specialist – saif.dev</title>
+<meta name="description" content="Ashkar Ibne Saif builds custom software, management systems and AI automations. Founder of Autoryx.">
+<meta property="og:title" content="Ashkar Ibne Saif – Code that thinks. Systems that run themselves.">
+<meta property="og:description" content="Software developer & AI automation specialist. Founder of Autoryx.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://saif.dev">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== TOKENS & THEME ===== */
+:root{--bg:#070a14;--bg2:#0d1222;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);--tx:#e8ecf7;--mu:#97a0ba;--a1:#3b82f6;--a2:#8b5cf6;--grad:linear-gradient(120deg,var(--a1),var(--a2));--glow:0 0 40px rgba(99,102,241,.25);--r:18px;--sh:0 10px 30px rgba(0,0,0,.35)}
+[data-theme=light]{--bg:#f5f7fd;--bg2:#e9edf9;--card:rgba(255,255,255,.75);--bd:rgba(20,30,70,.12);--tx:#10162b;--mu:#4b5572;--a1:#2563eb;--a2:#7c3aed;--glow:0 0 0 transparent;--sh:0 10px 30px rgba(30,40,90,.12)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:400 16px/1.65 Inter,sans-serif;background:var(--bg);color:var(--tx);transition:background .5s,color .5s;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--a1);outline-offset:3px}
+.wrap{width:min(1140px,92%);margin:auto}section{padding:88px 0;position:relative}
+.mono{font-family:'JetBrains Mono',monospace}.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-h{margin-bottom:44px;max-width:620px}.sec-h h2{font-size:clamp(1.9rem,4vw,2.7rem)}.sec-h p{color:var(--mu);margin-top:10px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);backdrop-filter:blur(14px);box-shadow:var(--sh);padding:26px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--a2);box-shadow:var(--sh),var(--glow)}
+.grid{display:grid;gap:22px}.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:600 .95rem Inter;cursor:pointer;transition:transform .2s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px)}.btn.p{background:var(--grad);color:#fff;border:0;box-shadow:var(--glow)}
+.rip{position:absolute;border-radius:50%;background:rgba(255,255,255,.45);transform:scale(0);animation:rp .6s linear;pointer-events:none}@keyframes rp{to{transform:scale(4);opacity:0}}
+.tag{display:inline-block;font:500 .72rem 'JetBrains Mono';padding:3px 10px;border-radius:999px;border:1px solid var(--bd);color:var(--mu);margin:0 6px 6px 0}
+.demo{color:#f59e0b;border-color:#f59e0b66}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s;transition-delay:calc(var(--i,0)*80ms)}.rv.in{opacity:1;transform:none}
+/* ===== PRELOADER, PROGRESS, CURSOR ===== */
+#pre{position:fixed;inset:0;z-index:999;background:var(--bg);display:grid;place-items:center;transition:opacity .6s,visibility .6s}#pre.off{opacity:0;visibility:hidden}#pre{animation:pf .4s 3s forwards}@keyframes pf{to{opacity:0;visibility:hidden}}
+#pre b{font:700 2.4rem 'Space Grotesk';animation:pl 1.2s infinite alternate}@keyframes pl{to{opacity:.4;letter-spacing:4px}}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:200}
+#glow{position:fixed;width:340px;height:340px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(99,102,241,.16),transparent 65%);transform:translate(-50%,-50%);display:none}
+@media(hover:hover) and (pointer:fine){#glow{display:block}}
+/* ===== NAV ===== */
+nav{position:fixed;top:0;width:100%;z-index:100;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
+.nv{display:flex;align-items:center;justify-content:space-between;height:68px}.logo{font:700 1.3rem 'Space Grotesk'}
+.lk{display:flex;gap:4px;list-style:none;align-items:center}.lk a{padding:8px 12px;border-radius:10px;font-size:.9rem;color:var(--mu);transition:.2s}.lk a:hover,.lk a.act{color:var(--tx);background:var(--card)}
+.ib{background:var(--card);border:1px solid var(--bd);color:var(--tx);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+#ham{display:none}
+@media(max-width:900px){#ham{display:block}.lk{position:fixed;top:68px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:14px;transform:translateY(-130%);transition:transform .4s;border-bottom:1px solid var(--bd)}.lk.open{transform:none}}
+/* ===== HERO ===== */
+#home{min-height:100vh;display:flex;align-items:center;padding-top:110px;overflow:hidden}
+#grid{position:absolute;inset:0;background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 40%,#000,transparent 70%);animation:gm 14s linear infinite}@keyframes gm{to{background-position:56px 56px}}
+.orb{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(90px);opacity:.28;background:var(--grad);top:-120px;right:-100px;animation:fl 9s ease-in-out infinite alternate}@keyframes fl{to{transform:translate(-60px,80px)}}
+.hero{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.3rem,6vw,4.1rem);margin:14px 0}.hero .sub{color:var(--mu);font-size:1.12rem;max-width:560px}
+.type{font:500 1.05rem 'JetBrains Mono';color:var(--a1);min-height:1.7em}.type::after{content:'|';animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0}
+.av{position:relative;width:min(300px,70vw);aspect-ratio:1;margin:auto}.av svg{width:100%;height:100%}
+.ring{position:absolute;inset:-14px;border-radius:50%;border:2px dashed var(--a2);animation:sp 18s linear infinite}.ring.r2{inset:-30px;border:2px solid transparent;border-top-color:var(--a1);animation-duration:7s}@keyframes sp{to{transform:rotate(360deg)}}
+.strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}.strip span{font-size:.82rem;padding:8px 14px;border-radius:12px;background:var(--card);border:1px solid var(--bd)}
+/* marquee */
+.mq{overflow:hidden;border-block:1px solid var(--bd);padding:16px 0;background:var(--bg2)}.mq div{display:flex;gap:44px;width:max-content;animation:mq 32s linear infinite;font:500 .95rem 'JetBrains Mono';color:var(--mu)}@keyframes mq{to{transform:translateX(-50%)}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;text-align:center}.stats b{display:block;font:700 2.4rem 'Space Grotesk'}.stats span{color:var(--mu);font-size:.9rem}
+/* ===== ABOUT ===== */
+.sk h4{margin-bottom:12px}.sb{margin-bottom:12px;font-size:.85rem}.sb i{display:block;height:7px;background:var(--bd);border-radius:9px;margin-top:5px;overflow:hidden}.sb i::after{content:'';display:block;height:100%;width:0;background:var(--grad);border-radius:9px;transition:width 1.3s cubic-bezier(.2,.8,.2,1)}.in .sb i::after,.sb.in i::after{width:var(--w)}
+.tl{border-left:2px solid var(--bd);padding-left:24px;display:grid;gap:22px}.tl div{position:relative}.tl div::before{content:'';position:absolute;left:-31px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--grad);box-shadow:var(--glow)}.tl small{color:var(--a1);font-family:'JetBrains Mono'}
+/* ===== PORTFOLIO ===== */
+.flt{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}.flt button{padding:9px 18px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--mu);cursor:pointer;font:500 .88rem Inter;transition:.25s}.flt button.on{background:var(--grad);color:#fff;border-color:transparent}
+.pj{cursor:pointer;padding:0;overflow:hidden;transition:opacity .35s,transform .35s,box-shadow .3s}.pj.hide{display:none}.pj.fade{opacity:0;transform:scale(.94)}.pj .bd{padding:22px}.pj h3{font-size:1.2rem;margin:6px 0}.pj p{color:var(--mu);font-size:.92rem}
+.mock{height:150px;background:linear-gradient(135deg,hsl(var(--h),70%,22%),hsl(calc(var(--h) + 50),70%,32%));padding:14px;display:grid;grid-template-columns:34px 1fr;gap:10px;position:relative}.mock .sd{background:rgba(255,255,255,.14);border-radius:8px}.mock .mn{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:26px 1fr;gap:8px}.mock .mn i{background:rgba(255,255,255,.18);border-radius:7px}.mock .mn i:nth-child(n+4){grid-row:2;display:flex;align-items:flex-end}.mock .mn i:last-child{background:linear-gradient(to top,rgba(255,255,255,.4),rgba(255,255,255,.08))}.mock .bg{position:absolute;right:10px;bottom:8px;font:500 .62rem 'JetBrains Mono';background:#0008;color:#fbbf24;padding:2px 8px;border-radius:9px}
+#mod{position:fixed;inset:0;z-index:300;background:rgba(3,6,15,.72);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px;opacity:0;visibility:hidden;transition:.3s}#mod.on{opacity:1;visibility:visible}
+#mod .bx{background:var(--bg2);border:1px solid var(--bd);border-radius:22px;max-width:760px;width:100%;max-height:90vh;overflow:auto;transform:scale(.94);transition:.3s}#mod.on .bx{transform:none}#mod .mock{height:170px}#mod .ct{padding:26px}#mod h4{margin:16px 0 4px;color:var(--a1);font-size:.95rem}#mod ul{padding-left:20px;color:var(--mu)}#mod .x{position:absolute;right:14px;top:14px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:8px}.kp div{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px;font-size:.85rem}
+/* services, process, blog */
+.ic{font-size:1.9rem;display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:var(--grad);margin-bottom:14px}.card ul{padding-left:18px;color:var(--mu);font-size:.9rem;margin:10px 0 16px}
+.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;position:relative}.pr .card{text-align:center;padding:22px 16px}.pr .n{font:700 1.4rem 'JetBrains Mono';width:46px;height:46px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;border:2px solid var(--a2);transition:.5s}.pr .rv.in .n{background:var(--grad);color:#fff;box-shadow:var(--glow)}
+.bl{padding:0;overflow:hidden}.bl .im{height:130px;background:linear-gradient(135deg,hsl(var(--h),75%,45%),hsl(calc(var(--h) + 60),75%,30%))}.bl .bd{padding:20px}.bl small{color:var(--mu)}
+.q{font-style:italic;color:var(--mu)}.who{margin-top:14px;font-weight:600}
+/* faq */
+.fq{border:1px solid var(--bd);border-radius:14px;margin-bottom:12px;background:var(--card);overflow:hidden}.fq button{all:unset;box-sizing:border-box;width:100%;padding:18px 22px;cursor:pointer;font:600 1rem 'Space Grotesk';display:flex;justify-content:space-between;gap:12px}.fq button:focus-visible{outline:2px solid var(--a1);outline-offset:-2px}.fq .a{max-height:0;overflow:hidden;transition:max-height .4s;color:var(--mu);padding:0 22px}.fq.on .a{max-height:220px;padding-bottom:18px}.fq.on .pl{transform:rotate(45deg)}.pl{transition:.3s}
+/* contact */
+form{display:grid;gap:14px}label{font-size:.85rem;color:var(--mu)}input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--bd);background:var(--bg2);color:var(--tx);font:inherit;margin-top:5px}input.bad,textarea.bad,select.bad{border-color:#ef4444}.er{color:#ef4444;font-size:.78rem;min-height:1em;display:block}
+.ok{text-align:center;padding:30px;display:none}.ok svg{width:80px;stroke:#22c55e;stroke-width:5;fill:none;stroke-dasharray:100;stroke-dashoffset:100;animation:dr .8s .1s forwards}@keyframes dr{to{stroke-dashoffset:0}}
+.ban{margin-top:60px;text-align:center;padding:48px 24px;border-radius:26px;background:var(--grad);color:#fff}.ban .btn{margin-top:16px;background:#fff;color:#1e1b4b;border:0}
+footer{border-top:1px solid var(--bd);padding:50px 0 28px;background:var(--bg2)}.ft{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}.ft a{color:var(--mu);margin-right:16px;font-size:.9rem}.ft a:hover{color:var(--tx)}.cp{margin-top:30px;color:var(--mu);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#top{position:fixed;right:20px;bottom:20px;z-index:90;opacity:0;visibility:hidden;transition:.3s}#top.on{opacity:1;visibility:visible}
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,120px);background:var(--bg2);border:1px solid var(--a2);padding:12px 22px;border-radius:14px;z-index:400;transition:transform .4s;box-shadow:var(--glow)}#toast.on{transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="pre"><b class="grad">saif.dev</b></div><div id="bar"></div><div id="glow"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav aria-label="Main"><div class="wrap nv">
+<a href="#home" class="logo">saif<span class="grad">.dev</span></a>
+<ul class="lk" id="lk">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#blog">Blog</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+<div style="display:flex;gap:10px"><button class="ib" id="th" aria-label="Toggle light and dark theme">🌙</button><button class="ib" id="ham" aria-label="Open menu" aria-expanded="false">☰</button></div>
+</div></nav>
+
+<main>
+<!-- ===== 1. HOME ===== -->
+<section id="home"><div id="grid"></div><div class="orb"></div>
+<div class="wrap hero">
+<div>
+<span class="mono" style="color:var(--mu)">Ashkar Ibne Saif · Founder of Autoryx</span>
+<h1>Code that thinks. <span class="grad">Systems that run themselves.</span></h1>
+<div class="type" id="type" aria-live="off"></div>
+<p class="sub" style="margin-top:12px">I build software and AI automations that give businesses their time back.</p>
+<div class="cta"><a href="#contact" class="btn p">Hire Me</a><a href="#portfolio" class="btn">View Portfolio</a><a href="#" class="btn" id="cv">Download CV</a></div>
+<div class="strip"><span>🧩 Management Systems</span><span>🤖 AI Chatbots</span><span>⚙️ Workflow Automation</span><span>🌐 Web Apps</span></div>
+<p class="mono" style="margin-top:22px;font-size:.8rem;color:var(--mu)">Featured work: Hospital System · AI Support Bot · Restaurant POS</p>
+</div>
+<div class="av" role="img" aria-label="Stylized avatar placeholder for Ashkar Ibne Saif">
+<div class="ring"></div><div class="ring r2"></div>
+<svg viewBox="0 0 200 200"><defs><linearGradient id="ag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><circle cx="100" cy="100" r="98" fill="url(#ag)"/><circle cx="100" cy="82" r="32" fill="#fff" opacity=".92"/><path d="M36 182c4-40 32-58 64-58s60 18 64 58a98 98 0 0 1-128 0z" fill="#fff" opacity=".92"/><text x="100" y="92" text-anchor="middle" font-family="monospace" font-size="22" fill="#4f46e5">&lt;/&gt;</text></svg>
+</div></div></section>
+
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section style="padding:56px 0"><div class="wrap stats">
+<div class="rv"><b class="grad cnt" data-n="40">0</b><span>Projects delivered*</span></div>
+<div class="rv" style="--i:1"><b class="grad cnt" data-n="25">0</b><span>Happy clients*</span></div>
+<div class="rv" style="--i:2"><b class="grad cnt" data-n="4">0</b><span>Years of experience*</span></div>
+<div class="rv" style="--i:3"><b class="grad cnt" data-n="120">0</b><span>Automations built*</span></div>
+</div><p class="wrap mono" style="text-align:center;font-size:.72rem;color:var(--mu);margin-top:14px">*Sample figures – replace with real numbers.</p></section>
+
+<!-- ===== 2. ABOUT ===== -->
+<section id="about"><div class="wrap">
+<div class="sec-h rv"><h2>Building software that earns its keep</h2><p>I'm Ashkar Ibne Saif, a software developer and AI automation specialist. I started by teaching myself to code, then moved from small websites to full management systems and AI workflows that save businesses hours every week.</p></div>
+<div class="grid g2">
+<div class="card rv"><h3>My journey & passion</h3><p style="color:var(--mu);margin-top:10px">I love the moment a tedious process disappears. That is why I focus on software and AI automation: practical tools for restaurants, clinics, schools and growing companies. My goal is simple – digital growth that business owners can feel in their day.</p>
+<h4 style="margin-top:18px">Work principles</h4><ul style="padding-left:18px;color:var(--mu)"><li>Solve the business problem first, then pick the tech.</li><li>Ship small, show progress weekly.</li><li>Document everything, so clients are never locked in.</li></ul>
+<h4 style="margin-top:18px">Future goals</h4><p style="color:var(--mu)">Grow Autoryx into a trusted regional AI automation agency and ship our own SaaS products.</p></div>
+<div class="card rv" style="--i:1" id="skills"><h3 style="margin-bottom:14px">Skills & tools</h3></div>
+</div>
+<div class="grid g2" style="margin-top:22px">
+<div class="card rv"><h3 style="margin-bottom:18px">Training & certificates</h3><div class="tl">
+<div><small>2022</small><h4>Web Development Fundamentals</h4><p style="color:var(--mu)">HTML, CSS, JavaScript and responsive design. (Sample entry)</p></div>
+<div><small>2023</small><h4>Backend & Databases</h4><p style="color:var(--mu)">APIs, authentication, SQL and NoSQL. (Sample entry)</p></div>
+<div><small>2024</small><h4>AI & Workflow Automation</h4><p style="color:var(--mu)">LLM integrations, n8n, Make, chatbots. (Sample entry)</p></div>
+<div><small>2025</small><h4>Freelancing & Agency Management</h4><p style="color:var(--mu)">Client delivery, proposals and growth. (Sample entry)</p></div></div></div>
+<div class="card rv" style="--i:1;border-color:var(--a2)"><div class="ic">🚀</div><h3>Autoryx</h3><p style="color:var(--mu);margin:8px 0">A software solutions and AI automation agency founded and owned by Ashkar.</p>
+<h4>Mission</h4><p style="color:var(--mu)">Give small and mid-size businesses enterprise-grade software and automation at a fair price.</p>
+<h4 style="margin-top:10px">Vision</h4><p style="color:var(--mu)">A world where repetitive work runs itself and teams spend time on what matters.</p></div>
+</div></div></section>
+
+<!-- ===== 3. PORTFOLIO ===== -->
+<section id="portfolio" style="background:var(--bg2)"><div class="wrap">
+<div class="sec-h rv"><h2>Selected work</h2><p>Ten sample builds showing how I approach real business problems. Click any card for the full case study.</p></div>
+<div class="flt" id="flt" role="group" aria-label="Filter projects"></div>
+<div class="grid g3" id="pg"></div></div></section>
+
+<!-- ===== 4. SERVICES ===== -->
+<section id="services"><div class="wrap">
+<div class="sec-h rv"><h2>What I can build for you</h2><p>From a single automation to a full custom platform.</p></div>
+<div class="grid g3" id="sv"></div></div></section>
+
+<!-- ===== 5. PROCESS ===== -->
+<section id="process" style="background:var(--bg2)"><div class="wrap">
+<div class="sec-h rv"><h2>How I work</h2><p>A clear, repeatable path from idea to a system that runs.</p></div>
+<div class="pr" id="pr"></div></div></section>
+
+<!-- ===== 6. TESTIMONIALS ===== -->
+<section id="testimonials"><div class="wrap">
+<div class="sec-h rv"><h2>Kind words</h2><p class="demo mono" style="font-size:.8rem">Sample testimonials – placeholders only.</p></div>
+<div class="grid g3">
+<div class="card rv"><p class="q">“The restaurant system cut our order mistakes to almost zero. The kitchen screen alone paid for the project.”</p><p class="who">Rafiq H. <span style="color:var(--mu);font-weight:400">· Restaurant owner (sample)</span></p></div>
+<div class="card rv" style="--i:1"><p class="q">“Our WhatsApp bot now answers 70% of questions before my team even wakes up. Clear communication all the way.”</p><p class="who">Nusrat J. <span style="color:var(--mu);font-weight:400">· Online store founder (sample)</span></p></div>
+<div class="card rv" style="--i:2"><p class="q">“Payroll used to take three days. Now it takes ten minutes. Delivered on time and well documented.”</p><p class="who">Dr. Imran K. <span style="color:var(--mu);font-weight:400">· Clinic director (sample)</span></p></div></div></div></section>
+
+<!-- ===== 7. BLOG ===== -->
+<section id="blog" style="background:var(--bg2)"><div class="wrap">
+<div class="sec-h rv"><h2>Notes from the workshop</h2><p>Short, practical reads on automation, software and running an agency.</p></div>
+<div class="grid g3" id="bg"></div></div></section>
+
+<!-- ===== 8. FAQ ===== -->
+<section id="faq"><div class="wrap" style="max-width:780px">
+<div class="sec-h rv"><h2>Questions clients ask</h2></div><div id="fq"></div></div></section>
+
+<!-- ===== 9. CONTACT ===== -->
+<section id="contact" style="background:var(--bg2)"><div class="wrap">
+<div class="sec-h rv"><h2>Let's talk about your project</h2><p>Tell me what slows your business down. I'll reply within 24 hours.</p></div>
+<div class="grid g2">
+<div class="card rv"><h3>Contact details</h3><p style="margin-top:14px">💬 WhatsApp: <a href="https://wa.me/801611108985" class="grad" target="_blank" rel="noopener">+801611108985</a></p><p>✉️ Email: <a href="mailto:noreply.saif@gmail.com" class="grad" id="em">noreply.saif@gmail.com</a></p><p>🕘 Sun–Thu, 10:00–19:00</p>
+<p style="margin-top:16px"><a href="https://saif.dev" class="tag" target="_blank" rel="noopener">Facebook</a><a href="https://saif.dev" class="tag" target="_blank" rel="noopener">LinkedIn</a><a href="https://saif.dev" class="tag" target="_blank" rel="noopener">GitHub</a></p></div>
+<div class="card rv" style="--i:1"><form id="f" novalidate>
+<label>Name<input id="n" autocomplete="name"><span class="er"></span></label>
+<label>Email<input id="e" type="email" autocomplete="email"><span class="er"></span></label>
+<label>Service<select id="s"><option value="">Choose a service</option></select><span class="er"></span></label>
+<label>Budget<select id="b"><option>Under $500</option><option>$500 – $2,000</option><option>$2,000 – $5,000</option><option>$5,000+</option></select></label>
+<label>Message<textarea id="m" rows="4"></textarea><span class="er"></span></label>
+<button class="btn p" type="submit">Send message</button></form>
+<div class="ok" id="ok"><svg viewBox="0 0 60 60"><path d="M12 31l12 12 24-26"/></svg><h3>Message ready!</h3><p style="color:var(--mu)">Your email app should open now. (Demo mode: no server.)</p></div></div></div>
+<div class="ban rv"><h2>Have an idea? Let's turn it into a working system.</h2><p style="opacity:.9">Free 30-minute discovery call, no obligation.</p><a href="#contact" class="btn" onclick="document.getElementById('n').focus()">Start a Project</a></div>
+</div></section>
+</main>
+
+<!-- ===== 10. FOOTER ===== -->
+<footer><div class="wrap"><div class="ft">
+<div><div class="logo">saif<span class="grad">.dev</span></div><p style="color:var(--mu);font-size:.9rem;max-width:280px;margin-top:8px">Software & AI automation by Ashkar Ibne Saif.</p></div>
+<div><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+<div><a href="https://saif.dev" aria-label="Facebook">Facebook</a><a href="https://saif.dev" aria-label="LinkedIn">LinkedIn</a><a href="https://saif.dev" aria-label="GitHub">GitHub</a></div>
+</div><div class="cp"><span>© 2026 Ashkar Ibne Saif | Autoryx</span><span>Built with <span style="color:#ef4444">♥</span> by saif.dev</span></div></div></footer>
+
+<button class="ib" id="top" aria-label="Back to top">↑</button>
+<div id="toast" role="status"></div>
+<div id="mod" role="dialog" aria-modal="true" aria-label="Project details"><div class="bx"><div style="position:relative"><button class="ib x" id="mx" aria-label="Close">✕</button><div id="mc"></div></div></div></div>
+
+<script>
+/* ===== DATA ===== */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const CATS={all:'All',ms:'Management Systems',ai:'AI Automation',web:'Web Apps',site:'Websites'};
+// [title,cat,short,problem,solution,role,stack,features,results]
+const P=[
+['Restaurant Management Software','ms','POS, tables, kitchen display and inventory in one screen.','Paper orders caused delays, wrong dishes and stock surprises.','A tablet POS sends orders live to a kitchen display, deducts ingredients automatically and reports daily sales.','Full-stack developer & UI designer','React, Node.js, PostgreSQL, WebSockets','POS|Table & order management|Kitchen display|Inventory|Sales reports','-35% order errors|+20% table turnover|Daily report in 1 click'],
+['Hospital Management System','ms','Patients, appointments, billing, pharmacy and lab with role-based access.','Patient data lived in separate files and registers.','One secure platform with a role for every user: admin, doctor, nurse, pharmacist, lab tech, cashier.','Lead developer','React, Node.js, MongoDB, JWT','Patient records|Appointments|Doctor schedules|Billing|Pharmacy & lab|Role-based access','-50% waiting time|One patient history|Audit trail on every record'],
+['HR Management System','ms','Employees, attendance, leave, payroll, hiring and reviews.','Manual spreadsheets made payroll slow and error-prone.','Central employee database with automatic payroll from attendance and approved leave.','Full-stack developer','Vue, Laravel, MySQL','Employee database|Attendance|Leave|Payroll|Recruitment|Performance reviews','Payroll: 3 days → 10 min|Fewer disputes|Self-service portal'],
+['AI Customer Support Chatbot','ai','WhatsApp and Messenger bot that answers, qualifies and hands off.','Support teams answered the same questions all day.','An LLM bot trained on the company FAQ replies instantly and passes complex chats to a human.','AI automation engineer','OpenAI API, WhatsApp Cloud API, n8n, Node.js','24/7 replies|Order status lookup|Lead capture|Human handoff','~70% questions auto-resolved|Replies in seconds|More leads captured'],
+['Business Workflow Automation','ai','Lead capture, invoicing and email follow-ups on autopilot.','Leads got lost between forms, email and spreadsheets.','Make/n8n flows connect forms, CRM, invoicing and email with error alerts.','Automation architect','n8n, Make, Zapier, Google Sheets, Stripe','Lead capture|Auto invoices|Email sequences|Slack alerts','12+ hrs saved weekly|Zero missed leads|Invoices sent same day'],
+['E-commerce Platform + Admin','web','Storefront with a powerful admin dashboard.','The shop had no way to track stock, orders and campaigns together.','Fast storefront plus dashboard for products, orders, customers and analytics.','Full-stack developer','Next.js, Node.js, PostgreSQL, Stripe','Catalog & cart|Secure checkout|Admin dashboard|Coupons|Analytics','+28% conversion|Real-time stock|Mobile-first UX'],
+['Inventory & Billing System','ms','Stock, suppliers, invoices and barcode billing.','Shopkeepers counted stock by hand and lost track of profit.','Barcode billing with low-stock alerts, supplier ledger and profit reports.','Full-stack developer','Laravel, MySQL, Bootstrap','Barcode billing|Low-stock alerts|Supplier ledger|Printable invoices|Profit reports','Stock errors cut by 80%|Billing in seconds|Clear profit view'],
+['School / Coaching Management','ms','Students, classes, fees, results and parent updates.','Fee tracking and results were done on paper.','Student portal, automatic fee reminders and report cards parents can see online.','Full-stack developer','React, Firebase, Cloud Functions','Admissions|Attendance|Fee tracking|Result cards|Parent SMS/email','Fee collection +30%|Reports in minutes|Happier parents'],
+['AI Content & Social Media Tool','ai','Generates, schedules and posts content across channels.','Small teams struggled to post consistently.','AI drafts posts in the brand voice; a calendar schedules and auto-publishes after approval.','AI engineer & developer','OpenAI API, Node.js, React, Meta Graph API','Brand-voice drafts|Content calendar|Auto scheduling|Performance summary','5x faster content|Consistent posting|Approval workflow'],
+['Landing Page / Business Website','site','Fast, SEO-ready websites that convert visitors into enquiries.','The old site was slow and invisible on Google.','Clean, responsive design with strong copy, speed tuning and tracking.','Designer & front-end developer','HTML, CSS, JavaScript, WordPress','Responsive design|SEO setup|Contact & WhatsApp CTA|Speed optimized|Analytics','95+ Lighthouse score|Page ranks on first page|More enquiries']];
+const SK={Frontend:[['HTML/CSS/JS',92],['React',85]],Backend:[['Node.js',85],['PHP/Laravel',78]],Databases:[['PostgreSQL / MySQL',82],['MongoDB / Firebase',80]],'AI / Automation':[['LLM & chatbots',90],['n8n / Make / Zapier',92]],'DevOps / Tools':[['Git & GitHub',88],['Docker / Linux',72]]};
+const SV=[['💻','Custom Software Development','Software built around your exact workflow.','Requirements workshop|Architecture & build|Training & handover'],['🤖','AI Automation & Chatbots','Bots and AI agents that work around the clock.','WhatsApp/Messenger bots|LLM knowledge bases|Human handoff'],['🌐','Web Application Development','Secure, fast web apps and dashboards.','SaaS & portals|Admin panels|Payments & auth'],['🏥','Management Systems','Restaurant, hospital, HR, inventory and school systems.','Role-based access|Reports|Data migration'],['🔌','API & Third-party Integrations','Connect your tools so data flows by itself.','REST/Webhooks|Payment & SMS gateways|CRM sync'],['⚙️','Business Process Automation','Remove repetitive manual steps.','Process audit|n8n/Make/Zapier flows|Monitoring'],['🎨','Website & Landing Page Design','Fast pages in HTML, CSS or WordPress.','Responsive design|Copy guidance|Speed tuning'],['📈','SEO & Digital Marketing Support','Be found, then convert.','Technical SEO|Analytics setup|Campaign tracking']];
+const ST=[['Discovery','We talk goals, users and constraints.'],['Planning','Scope, timeline and fixed milestones.'],['Design','Wireframes and UI you approve first.'],['Development','Weekly builds you can click through.'],['Testing','Bug fixes, security and speed checks.'],['Delivery & Support','Launch, training and 30 days of care.']];
+const BL=[['AI Automation for Small Businesses','AI','Oct 12, 2026','6 min',220],['Choosing the Right Management Software','Software','Sep 28, 2026','7 min',160],['Intro to Workflow Automation','Automation','Sep 10, 2026','5 min',280],['Freelancing & Agency Tips','Business','Aug 22, 2026','4 min',30],['AI Tools for Developers','AI','Aug 5, 2026','8 min',320]];
+const FQ=[['How much does a project cost?','It depends on scope. Websites start small, automations are priced per workflow and full systems per module. You get a fixed quote after a free discovery call.'],['How long will it take?','Landing pages: 1–2 weeks. Automations: 1–3 weeks. Management systems: 6–12 weeks, delivered in milestones.'],['Do you offer support after launch?','Yes. Every project includes 30 days of free support, with optional monthly maintenance plans.'],['Which technologies do you use?','Mostly JavaScript/TypeScript, React, Node.js, Laravel, PostgreSQL/MySQL, plus OpenAI, n8n and Make for automation. I choose what fits your budget and team.'],['How does the process work?','Discovery, planning, design, development, testing, delivery. You see progress weekly and approve every stage.'],['Will I own the code?','Yes. After final payment you own the code, data and accounts, with documentation.']];
+const TECH='HTML5 · CSS3 · JavaScript · TypeScript · React · Next.js · Node.js · Laravel · Python · PostgreSQL · MySQL · MongoDB · Firebase · OpenAI · n8n · Make · Zapier · Docker · Git · WordPress'.split(' · ');
+
+/* ===== RENDER ===== */
+$('#mq').innerHTML=[...TECH,...TECH].map(t=>`<span>${t}</span>`).join('');
+$('#skills').insertAdjacentHTML('beforeend',Object.entries(SK).map(([g,a])=>`<div class="sk"><h4>${g}</h4>${a.map(([n,v])=>`<div class="sb">${n} <span class="mono" style="float:right;color:var(--mu)">${v}%</span><i style="--w:${v}%"></i></div>`).join('')}</div>`).join(''));
+const mock=(i,big)=>`<div class="mock" style="--h:${(i*37+210)%360}"><div class="sd"></div><div class="mn"><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="bg">Demo / Sample Project</span></div>`;
+$('#flt').innerHTML=Object.entries(CATS).map(([k,v],i)=>`<button data-c="${k}" class="${i?'':'on'}">${v}</button>`).join('');
+$('#pg').innerHTML=P.map((p,i)=>`<article class="card pj rv" data-c="${p[1]}" data-i="${i}" tabindex="0" role="button" aria-label="Open ${p[0]} details" style="--i:${i%3}">${mock(i)}<div class="bd"><span class="tag">${CATS[p[1]]}</span><span class="tag demo">Demo</span><h3>${p[0]}</h3><p>${p[2]}</p></div></article>`).join('');
+$('#sv').innerHTML=SV.map((s,i)=>`<div class="card rv" style="--i:${i%3}"><div class="ic">${s[0]}</div><h3>${s[1]}</h3><p style="color:var(--mu);margin-top:6px">${s[2]}</p><ul>${s[3].split('|').map(x=>`<li>${x}</li>`).join('')}</ul><a href="#contact" class="btn" data-svc="${s[1]}">Get a Quote</a></div>`).join('');
+$('#pr').innerHTML=ST.map((s,i)=>`<div class="card rv" style="--i:${i}"><div class="n">${i+1}</div><h3>${s[0]}</h3><p style="color:var(--mu);font-size:.9rem;margin-top:6px">${s[1]}</p></div>`).join('');
+$('#bg').innerHTML=BL.map((b,i)=>`<article class="card bl rv" style="--i:${i%3};--h:${b[4]}"><div class="im"></div><div class="bd"><span class="tag">${b[1]}</span><h3>${b[0]}</h3><small>${b[2]} · ${b[3]} read</small></div></article>`).join('');
+$('#fq').innerHTML=FQ.map((f,i)=>`<div class="fq rv"><button aria-expanded="false" aria-controls="a${i}">${f[0]}<span class="pl">+</span></button><div class="a" id="a${i}"><p>${f[1]}</p></div></div>`).join('');
+$('#s').insertAdjacentHTML('beforeend',SV.map(s=>`<option>${s[1]}</option>`).join(''));
+
+/* ===== THEME & NAV ===== */
+let theme='dark';const th=$('#th');
+th.onclick=()=>{theme=theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;th.textContent=theme==='dark'?'🌙':'☀️'};
+$('#ham').onclick=e=>{const o=$('#lk').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};
+$$('.lk a').forEach(a=>a.onclick=()=>$('#lk').classList.remove('open'));
+
+/* ===== SCROLL: progress, top, active link ===== */
+const secs=$$('main section[id]'),links=$$('.lk a');
+addEventListener('scroll',()=>{const h=document.documentElement,p=scrollY/(h.scrollHeight-innerHeight);$('#bar').style.width=p*100+'%';$('#top').classList.toggle('on',scrollY>600);let cur='home';secs.forEach(s=>{if(scrollY+120>=s.offsetTop)cur=s.id});links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+cur))},{passive:true});
+$('#top').onclick=()=>scrollTo({top:0});
+addEventListener('mousemove',e=>{const g=$('#glow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+
+/* ===== REVEAL + COUNTERS ===== */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');$$('.sb',e.target).forEach(x=>x.classList.add('in'));$$('.cnt',e.target).forEach(count);io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+function count(el){const n=+el.dataset.n;let t0;const step=t=>{t0=t0||t;const k=Math.min((t-t0)/1600,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)))+'+';if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+
+/* ===== TYPING ===== */
+const roles=['Software Developer','AI Automation Expert','Founder of Autoryx'];let ri=0,ci=0,del=false;
+(function ty(){const w=roles[ri],el=$('#type');el.textContent=w.slice(0,ci);if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=roles.join(' · ');return}
+if(!del&&ci++===w.length){del=true;return setTimeout(ty,1400)}if(del&&--ci<0){del=false;ci=0;ri=(ri+1)%roles.length}setTimeout(ty,del?40:85)})();
+
+/* ===== PORTFOLIO: filter + modal ===== */
+$('#flt').onclick=e=>{const b=e.target.closest('button');if(!b)return;$$('#flt button').forEach(x=>x.classList.toggle('on',x===b));$$('.pj').forEach(c=>{const show=b.dataset.c==='all'||c.dataset.c===b.dataset.c;if(show){c.classList.remove('hide');requestAnimationFrame(()=>c.classList.remove('fade'))}else{c.classList.add('fade');setTimeout(()=>c.classList.contains('fade')&&c.classList.add('hide'),350)}})};
+const mod=$('#mod');let lastF;
+function open(i){const p=P[i];lastF=document.activeElement;$('#mc').innerHTML=`${mock(i)}<div class="ct"><span class="tag">${CATS[p[1]]}</span><span class="tag demo">Demo / Sample Project</span><h2 style="margin:6px 0">${p[0]}</h2><p style="color:var(--mu)">${p[2]}</p><h4>The problem</h4><p style="color:var(--mu)">${p[3]}</p><h4>The solution</h4><p style="color:var(--mu)">${p[4]}</p><h4>My role</h4><p style="color:var(--mu)">${p[5]}</p><h4>Tech stack</h4><p>${p[6].split(', ').map(t=>`<span class="tag">${t}</span>`).join('')}</p><h4>Key features</h4><ul>${p[7].split('|').map(x=>`<li>${x}</li>`).join('')}</ul><h4>Results (sample metrics)</h4><div class="kp">${p[8].split('|').map(x=>`<div>${x}</div>`).join('')}</div><a href="#contact" class="btn p" style="margin-top:20px" onclick="closeM()">Build something similar</a></div>`;mod.classList.add('on');$('#mx').focus()}
+function closeM(){mod.classList.remove('on');lastF&&lastF.focus()}
+$('#pg').onclick=e=>{const c=e.target.closest('.pj');c&&open(c.dataset.i)};
+$('#pg').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const c=e.target.closest('.pj');if(c){e.preventDefault();open(c.dataset.i)}}};
+$('#mx').onclick=closeM;mod.onclick=e=>{if(e.target===mod)closeM()};addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
+
+/* ===== FAQ, quote buttons, ripple ===== */
+$('#fq').onclick=e=>{const b=e.target.closest('button');if(!b)return;const f=b.parentElement,o=f.classList.toggle('on');b.setAttribute('aria-expanded',o)};
+$('#sv').onclick=e=>{const b=e.target.closest('[data-svc]');if(b)$('#s').value=b.dataset.svc};
+document.addEventListener('click',e=>{const b=e.target.closest('.btn');if(!b)return;const r=b.getBoundingClientRect(),s=document.createElement('span'),d=Math.max(r.width,r.height);s.className='rip';s.style.cssText=`width:${d}px;height:${d}px;left:${e.clientX-r.left-d/2}px;top:${e.clientY-r.top-d/2}px`;b.appendChild(s);setTimeout(()=>s.remove(),600)});
+$('#cv').onclick=e=>{e.preventDefault();toast('CV link is a placeholder – add your PDF URL.')};
+
+/* ===== TOAST & FORM ===== */
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('on'),3200)}
+$('#f').onsubmit=e=>{e.preventDefault();let ok=true;const chk=(id,test,msg)=>{const el=$('#'+id),er=el.parentElement.querySelector('.er'),v=test(el.value.trim());el.classList.toggle('bad',!v);er.textContent=v?'':msg;ok=ok&&v};
+chk('n',v=>v.length>1,'Please enter your name.');chk('e',v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),'Enter a valid email like name@example.com.');chk('s',v=>v,'Choose a service.');chk('m',v=>v.length>=10,'Tell me a little more (10+ characters).');
+if(!ok)return toast('Please fix the highlighted fields.');
+const body=`Name: ${$('#n').value}\nEmail: ${$('#e').value}\nService: ${$('#s').value}\nBudget: ${$('#b').value}\n\n${$('#m').value}`;
+$('#f').style.display='none';$('#ok').style.display='block';toast('Message ready to send!');
+location.href=`mailto:noreply.saif@gmail.com?subject=${encodeURIComponent('Project enquiry – '+$('#s').value)}&body=${encodeURIComponent(body)}`};
+
+/* ===== PRELOADER & EASTER EGG ===== */
+const hidePre=()=>$('#pre').classList.add('off');setTimeout(hidePre,900);addEventListener('load',hidePre);
+console.log('%c saif.dev ','background:linear-gradient(120deg,#3b82f6,#8b5cf6);color:#fff;font-size:20px;padding:6px 12px;border-radius:6px','\nCurious about the code? Let\'s build something together → saif.dev');
+</script>
+</body>
+</html>
